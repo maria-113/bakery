@@ -6,6 +6,7 @@
   <meta name="description" content="Explore North Star Bakery breads, pastries, and cakes with pricing ranges.">
   <title>North Star Bakery | Products</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -28,14 +29,35 @@
       <p>Everything is made in small batches each morning. Prices are approximate ranges, and there is no online checkout. To reserve an item, send us a <a href="contact.html">pre-order request</a>.</p>
     </section>
 
-    <section>
+    <section id="planner">
+      <h2>Build Your Pre-Order List</h2>
+      <p>Choose the items you want by pressing <strong>Add to my list</strong> next to a product. Your list is saved on this device, so it will still be here when you come back, and it will fill in the pre-order form for you.</p>
+      <p>
+        <label for="category-filter">Show products from:</label>
+        <select id="category-filter" name="category_filter">
+          <option value="all">All products</option>
+          <option value="breads">Breads</option>
+          <option value="pastries">Pastries</option>
+          <option value="cakes">Cakes</option>
+        </select>
+      </p>
+      <h3>Your List</h3>
+      <p id="list-summary" aria-live="polite">Your list is empty.</p>
+      <ul id="preorder-items"></ul>
+      <p>
+        <button type="button" id="clear-list">Clear list</button>
+        <a href="contact.html">Send my list as a pre-order request</a>
+      </p>
+    </section>
+
+    <section data-category="breads">
       <h2>Breads</h2>
       <img src="bakery-bread.jpg" alt="Several rustic loaves of freshly baked bread cooling on a wire rack" width="600">
       <p>Hearty loaves with crackling crusts and soft, flavorful centers.</p>
       <ul>
-        <li><strong>Sourdough boule:</strong> $6 &ndash; $8</li>
-        <li><strong>Whole wheat sandwich loaf:</strong> $5 &ndash; $7</li>
-        <li><strong>Seeded multigrain:</strong> $7 &ndash; $9</li>
+        <li data-id="sourdough-boule"><strong>Sourdough boule:</strong> $6 &ndash; $8</li>
+        <li data-id="wheat-sandwich-loaf"><strong>Whole wheat sandwich loaf:</strong> $5 &ndash; $7</li>
+        <li data-id="seeded-multigrain"><strong>Seeded multigrain:</strong> $7 &ndash; $9</li>
       </ul>
 
       <figure>
@@ -44,23 +66,23 @@
       </figure>
     </section>
 
-    <section>
+    <section data-category="pastries">
       <h2>Pastries</h2>
       <p>Flaky, buttery, and perfect with your morning coffee.</p>
       <ul>
-        <li><strong>Butter croissants:</strong> $3 &ndash; $4</li>
-        <li><strong>Fruit danishes and scones:</strong> $3 &ndash; $5</li>
-        <li><strong>Cinnamon rolls:</strong> $4 &ndash; $5</li>
+        <li data-id="butter-croissants"><strong>Butter croissants:</strong> $3 &ndash; $4</li>
+        <li data-id="danishes-scones"><strong>Fruit danishes and scones:</strong> $3 &ndash; $5</li>
+        <li data-id="cinnamon-rolls"><strong>Cinnamon rolls:</strong> $4 &ndash; $5</li>
       </ul>
     </section>
 
-    <section>
+    <section data-category="cakes">
       <h2>Cakes</h2>
       <p>Made to order for birthdays, weddings, and neighborhood events. Please allow at least 72 hours for custom cakes.</p>
       <ul>
-        <li><strong>Everyday cakes (6-inch to 8-inch):</strong> $25 &ndash; $45</li>
-        <li><strong>Celebration cakes:</strong> $50 &ndash; $120</li>
-        <li><strong>Cupcakes (half dozen):</strong> $15 &ndash; $20</li>
+        <li data-id="everyday-cakes"><strong>Everyday cakes (6-inch to 8-inch):</strong> $25 &ndash; $45</li>
+        <li data-id="celebration-cakes"><strong>Celebration cakes:</strong> $50 &ndash; $120</li>
+        <li data-id="cupcakes"><strong>Cupcakes (half dozen):</strong> $15 &ndash; $20</li>
       </ul>
     </section>
 

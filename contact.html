@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send an inquiry or pre-order request to North Star Bakery. Find our hours and location.">
+  <title>North Star Bakery | Contact and Pre-Orders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="bakery-logo.png" alt="North Star Bakery logo" width="120">
+    <h1>Contact and Pre-Order Requests</h1>
+    <p>Warm, handmade baking for our neighborhood.</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Inquiry and Pre-Order Request Form</h2>
+      <p>Fields marked with an asterisk (*) are required. We will reply within one business day.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Contact Information</legend>
+
+          <p>
+            <label for="name">Full name *</label><br>
+            <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+          </p>
+
+          <p>
+            <label for="email">Email address *</label><br>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </p>
+
+          <p>
+            <label for="phone">Phone number (optional, format: 555-123-4567)</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567" autocomplete="tel">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Request</legend>
+
+          <p>
+            <label for="request-type">Request type *</label><br>
+            <select id="request-type" name="request_type" required>
+              <option value="">Please choose one</option>
+              <option value="preorder">Pre-order</option>
+              <option value="general">General question</option>
+              <option value="event">Event or catering inquiry</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="pickup-date">Preferred pickup date *</label><br>
+            <input type="date" id="pickup-date" name="pickup_date" required>
+          </p>
+
+          <p>
+            <label for="item-details">Item details *</label><br>
+            <textarea id="item-details" name="item_details" rows="5" cols="40" required minlength="10" maxlength="500" placeholder="Example: 2 sourdough boules and a dozen butter croissants"></textarea>
+          </p>
+
+          <p>
+            <label for="allergy-notes">Allergy notes (if applicable)</label><br>
+            <textarea id="allergy-notes" name="allergy_notes" rows="3" cols="40" maxlength="300" placeholder="Example: nut allergy"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Send Request</button>
+          <button type="reset">Clear Form</button>
+        </p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Location</h2>
+      <address>
+        North Star Bakery<br>
+        123 Maple Street, Your Town, ST 00000<br>
+        Phone: <a href="tel:5551234567">555-123-4567</a>
+      </address>
+      <p>Free street parking is available, and we are one block from the Maple Street bus stop.</p>
+    </section>
+
+    <section>
+      <h2>Hours of Operation</h2>
+      <ul>
+        <li>Monday to Friday: 6:30 AM &ndash; 6:00 PM</li>
+        <li>Saturday: 7:00 AM &ndash; 4:00 PM</li>
+        <li>Sunday: 8:00 AM &ndash; 1:00 PM</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. Baked fresh daily for our neighbors.</p>
+    <p>Questions? Visit our <a href="contact.html">contact page</a> or email <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>.</p>
+  </footer>
+</body>
+</html>
